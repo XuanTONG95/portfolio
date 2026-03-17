@@ -141,20 +141,11 @@ strong {
   }
 }
 
-/* --- PROFILE IMAGE STYLING --- */
 .profile-img {
-  width: 200px;         /* Smaller, balanced size */
-  height: 200px;        /* Keep height same as width for a circle */
-  border-radius: 50%;   /* Makes it a circle */
-  object-fit: cover;    /* Prevents the image from looking squished */
-  display: block;       /* Allows centering */
-  margin: 0 auto 30px;  /* Centers it and adds space below */
-  border: 5px solid white; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft professional shadow */
-}
-
-/* Optional: Center the "About" heading too */
-.about-section h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
