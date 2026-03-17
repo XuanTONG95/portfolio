@@ -41,13 +41,15 @@ nav ul li a {
 
 nav ul li a:hover { color: #3498db; }
 
-/* FORCE RESET FOR HOME SECTION */
 #home {
-    all: unset !important; /* This kills all other styles for this section */
+    all: unset !important;
     display: flex !important;
     position: relative !important;
     width: 100vw !important;
-    height: 90vh !important;
+    
+    /* CHANGE THIS to make it taller */
+    height: 850px !important; 
+    
     margin-left: 50% !important;
     transform: translateX(-50%) !important;
     overflow: hidden !important;
@@ -61,8 +63,12 @@ nav ul li a:hover { color: #3498db; }
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('images/cover.png') !important; 
-    background-size: contain !important;
+    
+    /* Ensure the extension matches your file (.jpg or .png) */
+    background-image: url('images/cover.jpg') !important; 
+    
+    /* 'contain' is the secret to seeing the WHOLE pic */
+    background-size: contain !important; 
     background-repeat: no-repeat !important;
     background-position: center bottom !important;
     z-index: 1 !important;
