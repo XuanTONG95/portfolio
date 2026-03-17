@@ -47,7 +47,7 @@ nav ul li a:hover { color: #3498db; }
     display: flex !important;
     position: relative !important;
     width: 100vw !important;
-    height: 600px !important;
+    height: 900px !important;
     margin-left: 50% !important;
     transform: translateX(-50%) !important;
     overflow: hidden !important;
