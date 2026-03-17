@@ -90,21 +90,22 @@
     display: flex !important; 
     position: relative !important; 
     width: 100vw !important; 
-    height: 80vh !important; /* Uses 80% of screen height */
+    height: 80vh !important; 
     margin-left: 50% !important; 
     transform: translateX(-50%) !important; 
     background-color: #000 !important; 
     overflow: hidden !important; 
-    align-items: center !important; 
+    /* CHANGED: This moves the content to the top */
+    align-items: flex-start !important; 
     justify-content: center !important;">
 
   <div style="
       position: absolute; 
       top: 0; left: 0; width: 100%; height: 100%; 
-      background-image: url('images/cover.png'); 
-      background-size: cover; /* This removes the black bars on left/right */
+      background-image: url('images/cover.jpg'); 
+      background-size: cover; 
       background-repeat: no-repeat; 
-      background-position: center 80%; /* This moves the 'camera' down to show the text */
+      background-position: center 80%; 
       filter: brightness(0.6); 
       z-index: 1;">
   </div>
@@ -115,9 +116,13 @@
       text-align: center; 
       color: white; 
       text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
-      padding: 20px;">
-    <h1 style="font-size: clamp(2rem, 8vw, 4rem); font-weight: bold; margin-bottom: 10px;">Bonjour, Je m'appelle Xuan TONG</h1>
-    <p style="font-size: clamp(1rem, 3vw, 1.5rem); opacity: 0.9;">Business Analyst | Data-Driven Decision Making</p>
+      /* ADDED: This controls exactly how far from the top the text sits */
+      padding-top: 100px; 
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: bold; margin-bottom: 5px;">Bonjour, Je m'appelle Xuan TONG</h1>
+    <p style="font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 300; opacity: 0.95;">Business Analyst | Data-Driven Decision Making</p>
   </div>
 </section>
 
