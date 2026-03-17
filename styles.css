@@ -150,14 +150,78 @@ strong {
   margin: 0 auto;
 }
 
-.home-cover-img {
-  width: 100%;
-  max-width: 600px;
-  /* Change 'auto' to a fixed height to ensure it stays small */
-  height: 200px; 
-  object-fit: cover;     /* This is key: it crops the image so it's not squished */
-  border-radius: 12px;
-  margin: 0 auto 20px;
-  display: block;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* Styling for the Home Section as a Full-Width Blurred Background */
+section#home {
+  position: relative;          /* Needed for the absolute-positioned pseudo-element background */
+  width: 100%;                  /* Full width of the viewport/parent */
+  min-height: 100vh;           /* Take up at least the full height of the viewport */
+  display: flex;                /* Use flexbox for layout */
+  justify-content: center;      /* Center content horizontally */
+  align-items: flex-start;      /* Align content to the top vertically */
+  padding: 80px 40px;          /* Add padding around content, especially at the top */
+  overflow: hidden;             /* Hide any overflow from the blurred background */
+  background: none;             /* Remove any existing background gradient/color */
+  text-align: center;           /* Center text for elements without specific alignment */
 }
+
+/* Create a full background with the image and blur using ::before pseudo-element */
+section#home::before {
+  content: "";
+  position: absolute;           /* Position absolutely within the section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/cover.png'); /* Set your cover image path */
+  background-size: cover;       /* Stretch image to cover the entire section */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat;
+  filter: blur(5px);           /* Apply blur effect to the background only */
+  transform: scale(1.1);       /* Slightly scale up to avoid unblurred edges */
+  opacity: 1;                  /* Set full opacity for the background itself */
+  z-index: 1;                   /* Keep background layer below text */
+}
+
+/* Optional: Add a subtle dark overlay to the entire background image layer for better text contrast */
+section#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay with some transparency */
+  z-index: 2;                   /* Layer on top of image and below text */
+}
+
+/* Stylings for the content (text, title) that sit on top of the background */
+.home-content {
+  position: relative;           /* Keep content in flow and allow for stacking control */
+  z-index: 3;                   /* Sit on top of image and overlay layers */
+  max-width: 900px;             /* Maintain consistency with other sections */
+  margin-top: 50px;             /* Adjust top margin for exact placement */
+  color: white;                 /* Ensure all text within this content div is white by default */
+}
+
+/* Ensure headings have white color if needed */
+section#home h1, section#home h2 {
+  color: white;
+}
+
+/* Adjust heading size and margins for better fit with this new layout */
+section#home h1 {
+  font-size: 3rem;              /* Adjust heading size as needed */
+  margin-bottom: 20px;
+}
+
+section#home p {
+  font-size: 1.2rem;            /* Adjust paragraph size as needed */
+  margin-bottom: 20px;
+}
+
+/* Style for "Alchemist" word if you add it, e.g., as h2. Please clarify its position and size. */
+/* .alchemist-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+} */
