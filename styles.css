@@ -149,3 +149,15 @@ strong {
   display: block;
   margin: 0 auto;
 }
+
+.home-cover {
+  width: 100%;           /* Scale to the width of the white box */
+  max-width: 600px;      /* Prevents it from getting TOO big on large screens */
+  height: auto;          /* Maintains the original proportions */
+  max-height: 250px;     /* Limits the vertical height */
+  object-fit: cover;     /* Crops nicely if the proportions are off */
+  border-radius: 12px;   /* Rounds the corners for a modern look */
+  margin: 0 auto 20px;   /* Centers it and adds space below */
+  display: block;        /* Necessary for the centering to work */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Adds a soft professional shadow */
+}
