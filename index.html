@@ -1,83 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xuan Tong | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuan TONG | Business Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <style>
+        /* Home/Hero Section */
+        #home {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/cover.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: -56px; /* Offset for fixed navbar */
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .about-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 5px solid #f8f9fa;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .projects-section, .skills-section { padding: 80px 0; }
+        
+        .card { 
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover { transform: translateY(-5px); }
+
+        .skills-section .card-img-top {
+            padding: 30px;
+            height: 140px;
+            object-fit: contain;
+        }
+
+        .contact-section { padding: 80px 0; }
+        
+        .social-icon {
+            width: 40px;
+            margin-bottom: 10px;
+            filter: brightness(0) invert(1); /* Makes black icons white */
+        }
+
+        body { padding-top: 56px; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">LinkedIn</a></li>
-    </ul>
-  </nav>
-
-  <!-- HOME -->
-    <section id="home">
-    <div class="home-content">
-      <h1>Bonjour, Je m'appelle Xuan TONG</h1>
-      <p>Business Analyst | Data-Driven Decision Making | Excel • SQL • Power BI • Python</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">Xuan TONG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
-  </section>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about" class="about-section">
-    <h1>About</h1>
-
-<img src="images/profile.png" alt="Xuan Tong Profile Photo" class="profile-img" />
-
-    <div class="about-text">
-      <p>
-        Bonjour, I am Xuan TONG, a Business Area Manager based in Paris with a strong track record in sales, business development, and international market management across Europe and APAC.
-      </p>
-
-      <p>
-        Over the past few years, I have consistently driven growth and performance, becoming a top performer and contributing significantly to my company's revenue.
-      </p>
-
-      <p>
-        Today, I am transitioning into a Business Analyst role, combining my business expertise with technical skills in Excel, SQL, Power BI and Python to turn data into actionable insights.
-      </p>
-
-      <p>
-        My goal is to bridge the gap between business and data, helping companies make smarter, data-driven decisions.
-      </p>
+<section id="home">
+    <div class="container">
+        <h1 class="display-3 font-weight-bold">Bonjour, I'm Xuan</h1>
+        <p class="lead">Business Analyst | Driving Data-Driven Decisions</p>
     </div>
-  </section>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Sales Dashboard (Power BI):</strong> Built an interactive dashboard to track sales performance and KPIs.
-      </li>
-      <li>
-        <strong>Customer Analysis (SQL):</strong> Analyzed customer data to identify trends and improve targeting strategy.
-      </li>
-    </ul>
-  </section>
+<section id="about" class="about-section bg-white">
+    <div class="container">
+        <h2>About Me</h2>
+        <img src="profile.png" alt="Xuan TONG">
+        <div class="row justify-content-center">
+            <div class="col-md-9 text-left">
+                <p>I am a <strong>Business Area Manager</strong> based in Paris with a strong track record in sales, business development, and international market management across Europe and APAC. Over the past few years, I have consistently driven growth and performance, contributing significantly to company revenue.</p>
+                <p>Today, I am transitioning into a <strong>Business Analyst</strong> role. I combine my business expertise with technical skills in <strong>Excel, SQL, Power BI, and Python</strong> to turn data into actionable insights. My goal is to bridge the gap between business and data, helping companies make smarter, data-driven decisions.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <ul>
-      <li>
-        <strong>Business Analysis Foundations:</strong> LinkedIn Learning
-      </li>
-      <li>
-        <strong>Excel / SQL / Power BI:</strong> Data Analytics Training Program
-      </li>
-    </ul>
-  </section>
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Projects</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Sales Performance Dashboard</h5>
+                        <p class="card-text">A comprehensive Power BI dashboard analyzing international market trends across APAC and Europe.</p>
+                        <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">SQL Inventory Analysis</h5>
+                        <p class="card-text">Using SQL to optimize stock levels and identify supply chain bottlenecks for business efficiency.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Python Financial Forecasting</h5>
+                        <p class="card-text">Predictive modeling using Python to forecast quarterly revenue based on historical data.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Explore Data</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="skills" class="skills-section bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Technical Toolkit</h2>
+        <div class="row text-center">
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card p-3">
+                    <h5 class="mt-2">Python</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card p-3">
+                    <h5 class="mt-2">SQL</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card p-3">
+                    <h5 class="mt-2">Power BI</h5>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card p-3">
+                    <h5 class="mt-2">Excel (VBA)</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section text-center text-white bg-dark">
+    <div class="container">
+        <h2 class="mb-5">Get In Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <p>Paris, France</p>
+                <p>xuantong.work@email.com</p>
+                <div class="mt-4">
+                    <a href="https://linkedin.com/in/YOUR_URL" class="mx-3 text-white">LinkedIn</a>
+                    <a href="https://github.com/XuanTONG95" class="mx-3 text-white">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
