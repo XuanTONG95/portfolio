@@ -85,11 +85,40 @@
     </div>
 </nav>
 
-<section id="home">
-    <div class="container">
-        <h1 class="display-3 font-weight-bold">Bonjour, I'm Xuan TONG</h1>
-        <p class="lead">Business Analyst | Driving Data-Driven Decisions</p>
-    </div>
+<section id="home" style="
+    all: unset; 
+    display: flex !important; 
+    position: relative !important; 
+    width: 100vw !important; 
+    height: 900px !important; 
+    margin-left: 50% !important; 
+    transform: translateX(-50%) !important; 
+    background-color: #000 !important; 
+    overflow: hidden !important; 
+    align-items: flex-start !important; 
+    justify-content: center !important;">
+
+  <div style="
+      position: absolute; 
+      top: 0; left: 0; width: 100%; height: 100%; 
+      background-image: url('images/cover.jpg'); 
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      background-position: center bottom; 
+      filter: brightness(0.7); 
+      z-index: 1;">
+  </div>
+
+  <div class="home-content" style="
+      position: relative; 
+      z-index: 2; 
+      text-align: center; 
+      color: white; 
+      padding-top: 80px; 
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.9);">
+    <h1 style="font-size: 3.5rem; font-weight: bold;">Bonjour, Je m'appelle Xuan TONG</h1>
+    <p style="font-size: 1.4rem;">Business Analyst | Data-Driven Decision Making</p>
+  </div>
 </section>
 
 <section id="about" class="about-section bg-white">
