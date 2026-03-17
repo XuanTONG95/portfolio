@@ -150,7 +150,7 @@ strong {
   margin: 0 auto;
 }
 
-.home-cover {
+.home-cover-img {
   width: 100%;           /* Scale to the width of the white box */
   max-width: 600px;      /* Prevents it from getting TOO big on large screens */
   height: auto;          /* Maintains the original proportions */
